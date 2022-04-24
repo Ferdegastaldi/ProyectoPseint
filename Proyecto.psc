@@ -9,7 +9,7 @@ SubProceso MENU1()//Selección de la opción
 	Escribir "6. Modificar datos.";
 	Escribir "7. Salir";
 FinSubProceso
-SubProceso MENU2()//Modificación de datos
+SubProceso MENU2()//Modificación de datos 
 	Escribir "";
 	Escribir "¿Qué desea modificar?";
 	Escribir "1. DNI.";
@@ -25,7 +25,7 @@ Proceso principal
 	definir NOM como cadena;
 	definir CONT1,CONT2,Busqueda Como Logico;
 	Definir PROM,aux Como Real;
-	dimension DNI[10],MAT[10],LENG[10],SOC[10],NAT[10],NOM[10],PROM[10];
+	dimension DNI[10],MAT[10],LENG[10],SOC[10],NAT[10],NOM[10],PROM[10],PROM1[10];
 	//Ideas: Busqueda por nota-Curso- Inscripcion a cursos
 	CONT1<-verdadero; //Continuar con el programa.
 	i<-0; //Contador de estudiantes.
@@ -132,13 +132,13 @@ Proceso principal
 					mientras (pos>0 y PROM[pos-1]>aux) Hacer
 						pos<-pos-1;
 					FinMientras
-					PROM[pos]<-aux;
+					PROM1[pos]<-aux;
 				FinPara
 				
 				Escribir "Los abanderados son: ";
 				
 				Para i<-2 Hasta 0 Con Paso -1 Hacer
-					Escribir NOM[i], " ", PROM[i];
+					Escribir NOM[i], " ", PROM1[i];
 				FinPara
 			6:
 				//Modificar datos
